@@ -15,12 +15,26 @@
 //     printf("%lf\n",arr[6]);
 //     return 0;
 // }
+// int main()
+// {
+//     // int a[10]={0,1,2,3,4,5,6,7,8,9},*p; p=a+1;
+//     // printf("%d\n",p[4]);
+//     int a[2][3]={1,2,3,4,5,6},(*p)[3]; p=a;
+//     printf("%d\n",*(*(p+1)+2));
+//     //printf("%d\n",p[1]+1);
+//     return 0;
+// }
+
+void sub(int x,int y,int *z)
+{
+    *z=y-x;
+}
 int main()
 {
-    // int a[10]={0,1,2,3,4,5,6,7,8,9},*p; p=a+1;
-    // printf("%d\n",p[4]);
-    int a[2][3]={1,2,3,4,5,6},(*p)[3]; p=a;
-    printf("%d\n",*(*(p+1)+2));
-    //printf("%d\n",p[1]+1);
+    int a,b,c;
+    sub(10,5,&a);
+    sub(7,a,&b);
+    sub(a,b,&c);
+    printf("%d,%d,%d\n",a,b,c);
     return 0;
 }
