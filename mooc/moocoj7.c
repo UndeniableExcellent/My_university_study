@@ -77,40 +77,79 @@
 5 6 3 8 23 90 12 34 25
 输出样例：
 3  5  6  8  12  23  25  34  90*/
-#include <stdio.h>
-void sort(int *arr,int n)
-{
-    int i,j,index,temp;
-    for(i=0;i<n-1;i++)
-    {
-        index=i;
-        for(j=i+1;j<n;j++)
-        {
-            if(arr[j]<arr[index])
-            {
-                index=j;//找到最小值的下标index
-            }
-        }
-        if(index!=i)
-        {
-            temp=arr[i];
-            arr[i]=arr[index];
-            arr[index]=temp;//交换最小值
-        }
-    }
+// #include <stdio.h>
+// void sort(int *arr,int n)
+// {
+//     int i,j,index,temp;
+//     for(i=0;i<n-1;i++)
+//     {
+//         index=i;
+//         for(j=i+1;j<n;j++)
+//         {
+//             if(arr[j]<arr[index])
+//             {
+//                 index=j;//找到最小值的下标index
+//             }
+//         }
+//         if(index!=i)
+//         {
+//             temp=arr[i];
+//             arr[i]=arr[index];
+//             arr[index]=temp;//交换最小值
+//         }
+//     }
+// }
+// int main()
+// {
+//     int n,i,arr[10];
+//     scanf("%d",&n);
+//     for(i=0;i<n;i++)
+//     {
+//         scanf("%d",&arr[i]);
+//     }
+//     sort(arr,n);
+//     for(i=0;i<n;i++)
+//     {
+//         printf("%d  ",arr[i]);
+//     }
+//     return 0;
+// }
+
+/*3编写函数同时求两个整数的和与差（10分）
+题目内容：
+主函数已经给定,请补齐程序,使函数SumDiff完成求两个整数的和与差(函数返回和值,差值通过设定指针形式参数通过间接引用进行计算),提交完整的程序代码
+主函数代码如下：
+
+int main( )
+{ 
+    int a,b,sum,dif;
+    scanf("%d%d",&a,&b);
+    sum=SumDiff(a,b,&dif);
+    printf("sum=%d, difference=%d\n",sum,dif);
+    return 0;
 }
-int main()
+输入格式:
+主函数已经给定输入语句
+输出格式：
+主函数已经给定输出语句
+输入样例：
+
+2   3
+
+输出样例：
+
+sum=5, difference=-1*/
+#include <stdio.h>
+int SumDiff(int a,int b,int *dif)
 {
-    int n,i,arr[10];
-    scanf("%d",&n);
-    for(i=0;i<n;i++)
-    {
-        scanf("%d",&arr[i]);
-    }
-    sort(arr,n);
-    for(i=0;i<n;i++)
-    {
-        printf("%d  ",arr[i]);
-    }
+    *dif=a-b;
+    return a+b;
+}
+int main( )
+{ 
+    int a,b,sum,dif;
+    scanf("%d%d",&a,&b);
+    sum=SumDiff(a,b,&dif);
+    printf("sum=%d, difference=%d\n",sum,dif);
     return 0;
 }
