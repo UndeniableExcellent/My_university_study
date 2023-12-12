@@ -8,13 +8,13 @@
 //     return 0;
 // }
 
-int main()
-{
-    double arr[10],*p=arr;
-    scanf("%lf",p+6);
-    printf("%lf\n",arr[6]);
-    return 0;
-}
+// int main()
+// {
+//     double arr[10],*p=arr;
+//     scanf("%lf",p+6);
+//     printf("%lf\n",arr[6]);
+//     return 0;
+// }
 // int main()
 // {
 //     // int a[10]={0,1,2,3,4,5,6,7,8,9},*p; p=a+1;
