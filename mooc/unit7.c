@@ -25,16 +25,30 @@
 //     return 0;
 // }
 
-void sub(int x,int y,int *z)
+// void sub(int x,int y,int *z)
+// {
+//     *z=y-x;
+// }
+// int main()
+// {
+//     int a,b,c;
+//     sub(10,5,&a);
+//     sub(7,a,&b);
+//     sub(a,b,&c);
+//     printf("%d,%d,%d\n",a,b,c);
+//     return 0;
+// }
+
+void fun(int x,int *y)
 {
-    *z=y-x;
+     x+=*y;
+    *y+=x;
 }
-int main()
+int main( )
 {
-    int a,b,c;
-    sub(10,5,&a);
-    sub(7,a,&b);
-    sub(a,b,&c);
-    printf("%d,%d,%d\n",a,b,c);
-    return 0;
+    int x=5,y=10;
+    fun(x,&y);
+    fun(y,&x);
+     printf("%d,%d",x,y);
+     return 0;
 }
