@@ -23,6 +23,5 @@ int main()
     *q='\0';
     printf("the new string is:\n");
     puts(str);
-    printf("\n");
     return 0;
 }
