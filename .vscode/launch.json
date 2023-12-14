@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/c++project/My_university_study/mooc",
-      "program": "d:/c++project/My_university_study/mooc/build/Debug/outDebug",
+      "cwd": "d:/c++project/My_university_study/B23051217/exp3",
+      "program": "d:/c++project/My_university_study/B23051217/exp3/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

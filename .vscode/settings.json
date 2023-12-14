@@ -55,5 +55,20 @@
   "C_Cpp_Runner.useLeakSanitizer": false,
   "C_Cpp_Runner.showCompilationTime": false,
   "C_Cpp_Runner.useLinkTimeOptimization": false,
-  "C_Cpp_Runner.msvcSecureNoWarnings": false
+  "C_Cpp_Runner.msvcSecureNoWarnings": false,
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "overrideName": true,
+      "args": [
+        "-NoExit",
+        "/c",
+        "chcp 65001"
+      ],
+      "icon": "terminal-powershell",
+      "env": {
+        "TEST_VAR": "value"
+      }
+    }
+  }
 }
