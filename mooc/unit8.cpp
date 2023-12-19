@@ -111,11 +111,13 @@ using namespace std;
 //     cout<<strlen("ab\045+045\'b")<<endl;
 //     return 0;
 // }
-
+#define G 9.8
 int main()
 {
     char a[7] = "abcdef", b[4] = "ABC";
     strcpy(a, b);
+
     cout<<a[5]<<endl;
+    cout<<G<<endl;
     return 0;
 }
