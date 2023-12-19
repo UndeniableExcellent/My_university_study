@@ -70,5 +70,6 @@
         "TEST_VAR": "value"
       }
     }
-  }
+  },
+  "C_Cpp.errorSquiggles": "enabled"
 }

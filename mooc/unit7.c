@@ -82,3 +82,16 @@
 //     printf("%d\n", fun(s, 4, N));
 //     return 0;
 // }
+#include <stdio.h>
+
+int main()
+{
+   int i=1,j=2;
+   int a[2][3]={1,2,3,4,5,6};
+   printf("%d\n",a[i*3+j]);
+   printf("%d\n",a[i][j]);
+   printf("%d\n",*(a+i)+j);
+   printf("%d\n",*(a+i*3+j));
+   return 0;
+}
+
