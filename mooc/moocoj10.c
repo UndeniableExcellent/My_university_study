@@ -45,7 +45,7 @@ struct Student
 	int physics;
 	int english;
 	int sum;
-	float aver;
+	double aver;
 };
 
 int main()
