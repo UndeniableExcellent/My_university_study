@@ -71,5 +71,6 @@
       }
     }
   },
-  "C_Cpp.errorSquiggles": "enabled"
+  "C_Cpp.errorSquiggles": "enabled",
+  "Codegeex.Explanation.LanguagePreference": "中文"
 }
