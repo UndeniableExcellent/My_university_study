@@ -15,32 +15,45 @@
 //     return 0;
 // }
 
+// #include <stdio.h>
+// #include <stdlib.h>
+// int main()
+// {
+//     int i, n;
+//     FILE *fp;
+//     if ((fp = fopen("temp", "w+")) == NULL)
+//     {
+//         printf("不能建立temp文件\n");
+//         exit(0);
+//     }
+//     for (i = 1; i <= 10; i++)
+//         fprintf(fp, "%3d", i);
+//     for (i = 0; i < 10; i++)
+//     {
+//         fseek(fp, i * 3L, SEEK_SET);
+//         fscanf(fp, "%d", &n);
+//         fseek(fp, i * 3L, 0);
+//         fprintf(fp, "%3d", n + 10);
+//     }
+//     for (i = 0; i < 5; i++)
+//     {
+//         fseek(fp, i * 6L, 0);
+//         fscanf(fp, "%d", &n);
+//         printf("%d,", n);
+//     }
+//     fclose(fp);
+//     return 0;
+// }
+
 #include <stdio.h>
-#include <stdlib.h>
 int main()
 {
-    int i, n;
-    FILE *fp;
-    if ((fp = fopen("temp", "w+")) == NULL)
-    {
-        printf("不能建立temp文件\n");
-        exit(0);
-    }
-    for (i = 1; i <= 10; i++)
-        fprintf(fp, "%3d", i);
-    for (i = 0; i < 10; i++)
-    {
-        fseek(fp, i * 3L, SEEK_SET);
-        fscanf(fp, "%d", &n);
-        fseek(fp, i * 3L, 0);
-        fprintf(fp, "%3d", n + 10);
-    }
-    for (i = 0; i < 5; i++)
-    {
-        fseek(fp, i * 6L, 0);
-        fscanf(fp, "%d", &n);
-        printf("%d,", n);
-    }
-    fclose(fp);
+    FILE *pf;
+    char *s1 = "China", *s2 = "Beijing";
+    pf = fopen("abc.dat", "wb+");
+    fwrite(s2, 7, 1, pf);
+    rewind(pf);
+    fwrite(s1, 5, 1, pf);
+    fclose(pf);
     return 0;
 }
