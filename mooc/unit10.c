@@ -78,15 +78,25 @@
 //     return 0;
 // }
 
-struct
+// struct
+// {
+//     int x;
+//     char *y;
+// } sa[2] = {{1, "ab"}, {2, "cd"}}, *p = sa;
+// int main()
+// {
+//     //printf("%d\n", ++p->x);
+//     //printf("%d\n",(p+1)->x);
+//     printf("%s",(++p)->y);
+//     return 0;
+// }
+
+struct 
 {
-    int x;
-    char *y;
-} sa[2] = {{1, "ab"}, {2, "cd"}}, *p = sa;
+    int m,n;
+};
 int main()
 {
-    //printf("%d\n", ++p->x);
-    //printf("%d\n",(p+1)->x);
-    printf("%s",(++p)->y);
+    printf("hello\n");
     return 0;
 }

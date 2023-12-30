@@ -58,21 +58,46 @@
 //     return 0;
 // }
 
+// #include <stdio.h>
+// int main()
+// {
+//     FILE *fp;
+//     int k, n, i, a[6] = {10, 20, 30, 40, 50, 60};
+//     fp = fopen("d2.txt", "w");
+//     for (i = 0; i < 6; i++)
+//         fprintf(fp, "%d,%d\n", i, a[i]);
+//     fclose(fp);
+//     fp = fopen("d2.txt", "r");
+//     for (i = 0; i < 3; i++)
+//     {
+//         fscanf(fp, "%d,%d", &k, &n);
+//         printf("%d,%d\n", k, n);
+//     }
+//     fclose(fp);
+//     return 0;
+// }
+
 #include <stdio.h>
+#include <stdlib.h>
 int main()
 {
     FILE *fp;
-    int k, n, i, a[6] = {10, 20, 30, 40, 50, 60};
-    fp = fopen("d2.txt", "w");
-    for (i = 0; i < 6; i++)
-        fprintf(fp, "%d,%d\n", i, a[i]);
-    fclose(fp);
-    fp = fopen("d2.txt", "r");
-    for (i = 0; i < 3; i++)
+    char ch;
+    int count = 0;
+    fp = fopen("file.txt", "r");
+    if (fp == 0)
     {
-        fscanf(fp, "%d,%d", &k, &n);
-        printf("%d,%d\n", k, n);
+        printf("file error\n");
+        exit(1);
     }
+    ch = fgetc(fp);
+    while (!feof(fp))
+    {
+        if (ch >= 'a' && ch <= 'z')
+            count++;
+        ch = fgetc(fp);
+    }
+    printf("%d\n", count);
     fclose(fp);
     return 0;
 }
